@@ -18,3 +18,11 @@ jobs:
     steps:
       - name: Run a shell command on macOS
         run: echo "Running on macOS!"
+  dependent-job:
+    runs-on: windows-latest
+    needs: [run-shell-command]
+    steps:
+      - name: Run a powershell command on Windows
+        run: Write-Output "Running on Windows after previous jobs!"
+      - name: Error Step
+        run: doesnotexist
