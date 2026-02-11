@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: Setting an error message
         run: echo "::error::This is an error message from the workflow!"
+      - name: Setting an error message with parameters
+        run: echo "::error file=app.js,line=10,col=15::Syntax error in app.js at line 10, column 15"
