@@ -17,7 +17,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Run a shell command on macOS
-        run: echo "Running on macOS!"
+        run: Run sw_vers
   dependent-job:
     runs-on: windows-latest
     needs: [run-shell-command]
@@ -25,4 +25,4 @@ jobs:
       - name: Run a powershell command on Windows
         run: Write-Output "Running on Windows after previous jobs!"
       - name: Error Step
-        run: doesnotexist
+        run: doesnotexists
