@@ -1,7 +1,8 @@
 name: First Workflow
-on: push:
-  branches:
-    - '**'
+on: 
+  push:
+    branches:
+      - '**'
 
 jobs:
   run-shell-command:
