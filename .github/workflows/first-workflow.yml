@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - '**'
-
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
@@ -14,3 +13,8 @@ jobs:
         run: |
           echo "This is the first command."
           echo "This is the second command."
+  parallel-job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Run a shell command on macOS
+        run: echo "Running on macOS!"
