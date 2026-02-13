@@ -9,10 +9,7 @@ jobs:
     steps:
       - name: Change to a specific directory and run a command
         run: |
-          echo "Current working directory: $(pwd)"
-          cd my-directory
-          echo "Changed to directory: $(pwd)"
-          # Run your command here, for example:
+          pwd
           ls -la  
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
