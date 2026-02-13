@@ -7,7 +7,7 @@ jobs:
   my-working-directory-job-in-ubuntu:
     runs-on: ubuntu-latest
     steps:
-      -name: Change to a specific directory and run a command
+      - name: Change to a specific directory and run a command
         run: |
           echo "Current working directory: $(pwd)"
           cd my-directory
@@ -20,7 +20,7 @@ jobs:
   my-working-directory-job-in-windows:
     runs-on: windows-latest
     steps:
-      -name: Change to a specific directory and run a command
+      - name: Change to a specific directory and run a command
         run: |
           echo "Current working directory: $(pwd)"
           cd my-directory
