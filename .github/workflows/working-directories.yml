@@ -1,0 +1,32 @@
+name: Working Directories and Shell Example
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  my-working-directory-job-in-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Change to a specific directory and run a command
+        run: |
+          echo "Current working directory: $(pwd)"
+          cd my-directory
+          echo "Changed to directory: $(pwd)"
+          # Run your command here, for example:
+          ls -la  
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+  my-working-directory-job-in-windows:
+    runs-on: windows-latest
+    steps:
+      -name: Change to a specific directory and run a command
+        run: |
+          echo "Current working directory: $(pwd)"
+          cd my-directory
+          echo "Changed to directory: $(pwd)"
+          # Run your command here, for example:
+          ls -la  
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
